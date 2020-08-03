@@ -1,6 +1,7 @@
 import React from 'react';
 
 import PageHeader from '../../components/PageHeader';
+import TeacherItem from '../../components/TeacherItem';
 
 import * as Styled from './styles';
 
@@ -8,7 +9,7 @@ function TeacherList() {
   return (
     <Styled.PageTeacherList className="container">
       <PageHeader title="Estes são os proffys disponiveis.">
-        <form id="seacrh-teachers">
+        <form id="search-teachers">
           <div className="input-block">
             <label htmlFor="subject">Matéria</label>
             <input type="text" id="subject" />
@@ -25,6 +26,10 @@ function TeacherList() {
           </div>
         </form>
       </PageHeader>
+
+      <Styled.Main>
+        <TeacherItem />
+      </Styled.Main>
     </Styled.PageTeacherList>
   );
 }
