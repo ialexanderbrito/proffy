@@ -21,15 +21,21 @@
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
+- [Node.js](https://nodejs.org/en/)
+- [Expo](https://expo.io/)
 - [ReactJS](https://pt-br.reactjs.org/)
-- [Styled Components](https://styled-components.com/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [React Native](https://reactnative.dev/)
 
 Extras:
 
 - Main Libs
+  - [Styled Components](https://styled-components.com/)
+  - [Express](https://expressjs.com/pt-br/)
+  - [KnexJS](http://knexjs.org/)
+  - [SQLite3](https://www.sqlite.org/index.html)
+  - [CORS](https://github.com/expressjs/cors#readme)
 
-  
 - Estilos
 
   - [EditorConfig](https://editorconfig.org/)
@@ -52,7 +58,7 @@ Extras:
 
 Podemos considerar este projeto como sendo divido em três partes:
 
-1. Backend (em desenvolvimento)
+1. Backend
 2. Frontend
 3. Mobile (em desenvolvimento)
 
@@ -68,6 +74,30 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 
 E também será preciso um editor, eu indico o <b>[VSCode](https://code.visualstudio.com/)</b>
 
+### 🧭 Rodando o Backend
+
+```bash
+# Clone este repositório
+$ git clone https://github.com/ialexanderbrito/proffy
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd proffy
+
+# Vá para a pasta Backend
+$ cd backend
+
+# Instale as dependências
+$ npm install ou yarn
+
+# Execute a aplicação em modo de desenvolvimento
+$ npm start ou yarn start
+
+# Se quiser criei uma nova database (opcional)
+# Antes remova database da pasta: src/database/database.sqlite e execute:
+$ npm knex:migrate ou yarn knex:migrate
+
+# O servidor inciará na porta:3333 - acesse http://localhost:3333 
+```
 
 ### 🧭 Rodando o Frontend
 
