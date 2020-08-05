@@ -41,6 +41,19 @@ export const Fieldset = styled.fieldset`
     width: 100%;
     padding-bottom: 1.6rem;
     border-bottom: 1px solid var(--color-line-in-white);
+
+    button {
+      background: none;
+      border: 0;
+      color: var(--color-primary);
+      font: 700 1.6rem Archivo;
+      cursor: pointer;
+      transition: color 0.2s;
+
+      :hover {
+        color: var(--color-primary-dark);
+      }
+    }
   }
 `;
 
@@ -99,4 +112,10 @@ export const Button = styled.button`
   :hover {
     background: var(--color-secundary-dark);
   }
+`;
+
+export const ScheduleItem = styled.div`
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  column-gap: 1.6rem;
 `;
