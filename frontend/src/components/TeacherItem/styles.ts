@@ -71,7 +71,7 @@ export const Article = styled.article`
         margin-left: 1.6rem;
       }
     }
-    button {
+    a {
       width: 20rem;
       height: 5.6rem;
       background: var(--color-secundary);
@@ -84,6 +84,7 @@ export const Article = styled.article`
       align-items: center;
       justify-content: space-evenly;
       transition: 0.2s;
+      text-decoration: none;
 
       @media (min-width: 700px) {
         width: 24.5rem;
