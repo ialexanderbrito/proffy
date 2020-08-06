@@ -35,6 +35,7 @@ Extras:
   - [KnexJS](http://knexjs.org/)
   - [SQLite3](https://www.sqlite.org/index.html)
   - [CORS](https://github.com/expressjs/cors#readme)
+  - [Toastify](https://fkhadra.github.io/react-toastify/introduction)
 
 - Estilos
 
