@@ -49,7 +49,7 @@ function TeacherList() {
               { value: 'Física', label: 'Física' },
               { value: 'Geografia', label: 'Geografia' },
               { value: 'História', label: 'História' },
-              { value: 'Mátemática', label: 'Mátemática' },
+              { value: 'Matemática', label: 'Matemática' },
               { value: 'Portguês', label: 'Portguês' },
               { value: 'Química', label: 'Química' },
               { value: 'Inglês', label: 'Inglês' },
