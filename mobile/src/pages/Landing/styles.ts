@@ -13,6 +13,7 @@ export const Landing = styled.Image`
 `;
 
 export const Title = styled.Text`
+  font-family: 'Poppins_400Regular';
   color: #fff;
   font-size: 20px;
   line-height: 30px;
@@ -20,5 +21,5 @@ export const Title = styled.Text`
 `;
 
 export const TitleBold = styled.Text`
-  font-weight: bold;
+  font-family: 'Poppins_600SemiBold';
 `;
