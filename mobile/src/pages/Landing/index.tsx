@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 import * as Styled from './styles';
 
@@ -8,6 +9,11 @@ import giveClassesIcon from '../../assets/images/icons/give-classes.png';
 import heartIcon from '../../assets/images/icons/heart.png';
 
 function Landing() {
+  const { navigate } = useNavigation();
+
+  function handleNavigateToGiveClassesPage() {
+    navigate('GiveClasses');
+  }
   return (
     <Styled.Container>
       <Styled.Landing source={landingImg} />
@@ -21,7 +27,7 @@ function Landing() {
           <Styled.ButtonText>Estudar</Styled.ButtonText>
         </Styled.ButtonPrimary>
 
-        <Styled.ButtonSecondary>
+        <Styled.ButtonSecondary onPress={handleNavigateToGiveClassesPage}>
           <Styled.Study source={giveClassesIcon} />
           <Styled.ButtonText>Dar aulas</Styled.ButtonText>
         </Styled.ButtonSecondary>
