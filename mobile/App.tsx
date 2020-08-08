@@ -25,7 +25,7 @@ export default function App() {
   } else {
     return (
       <>
-        <StatusBar style="auto" />
+        <StatusBar style="light" />
         <Landing />
       </>
     );
