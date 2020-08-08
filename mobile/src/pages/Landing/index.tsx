@@ -14,6 +14,10 @@ function Landing() {
   function handleNavigateToGiveClassesPage() {
     navigate('GiveClasses');
   }
+
+  function handleNavigateToStudyPage() {
+    navigate('Study');
+  }
   return (
     <Styled.Container>
       <Styled.Landing source={landingImg} />
@@ -22,7 +26,7 @@ function Landing() {
         <Styled.TitleBold>O que deseja fazer?</Styled.TitleBold>
       </Styled.Title>
       <Styled.ButtonsContainer>
-        <Styled.ButtonPrimary>
+        <Styled.ButtonPrimary onPress={handleNavigateToStudyPage}>
           <Styled.Study source={studyIcon} />
           <Styled.ButtonText>Estudar</Styled.ButtonText>
         </Styled.ButtonPrimary>
