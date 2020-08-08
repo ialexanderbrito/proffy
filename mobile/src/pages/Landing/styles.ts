@@ -23,3 +23,45 @@ export const Title = styled.Text`
 export const TitleBold = styled.Text`
   font-family: 'Poppins_600SemiBold';
 `;
+
+export const ButtonsContainer = styled.View`
+  flex-direction: row;
+  margin-top: 40px;
+  justify-content: space-between;
+`;
+
+export const Study = styled.Image``;
+
+export const ButtonPrimary = styled.TouchableOpacity`
+  height: 150px;
+  width: 48%;
+  background-color: #9871f5;
+  border-radius: 8px;
+  padding: 24px;
+  justify-content: space-between;
+`;
+
+export const ButtonSecondary = styled.TouchableOpacity`
+  height: 150px;
+  width: 48%;
+  background-color: #04d361;
+  border-radius: 8px;
+  padding: 24px;
+  justify-content: space-between;
+`;
+
+export const ButtonText = styled.Text`
+  font-family: 'Archivo_700Bold';
+  font-size: 20px;
+  color: #fff;
+`;
+
+export const TotalConnections = styled.Text`
+  font-family: 'Poppins_400Regular';
+  color: #d4c2ff;
+  line-height: 20px;
+  max-width: 170px;
+  margin-top: 40px;
+`;
+
+export const Heart = styled.Image``;
