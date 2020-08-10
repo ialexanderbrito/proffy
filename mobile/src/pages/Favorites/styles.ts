@@ -4,3 +4,7 @@ export const Container = styled.View`
   flex: 1;
   background-color: #f0f0f7;
 `;
+
+export const TeacherList = styled.ScrollView`
+  margin-top: -60px;
+`;
