@@ -10,7 +10,16 @@ function TeacherList() {
     <Styled.Container>
       <PageHeader title="Proffys disponíveis" />
 
-      <TeacherItem />
+      <Styled.TeacherList
+        contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 16 }}
+      >
+        <TeacherItem />
+        <TeacherItem />
+        <TeacherItem />
+        <TeacherItem />
+        <TeacherItem />
+        <TeacherItem />
+      </Styled.TeacherList>
     </Styled.Container>
   );
 }
