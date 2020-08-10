@@ -6,5 +6,5 @@ export const Container = styled.View`
 `;
 
 export const TeacherList = styled.ScrollView`
-  margin-top: -60px;
+  margin-top: -40px;
 `;

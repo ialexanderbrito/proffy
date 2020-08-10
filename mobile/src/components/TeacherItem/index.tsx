@@ -35,7 +35,8 @@ function TeacherItem() {
 
         <Styled.ButtonsContainer>
           <Styled.FavoriteButton>
-            <Styled.Favorite source={heartOutlineIcon} />
+            {/* <Styled.Favorite source={heartOutlineIcon} /> */}
+            <Styled.Favorite source={unfavoriteIcon} />
           </Styled.FavoriteButton>
 
           <Styled.ContactButton>
