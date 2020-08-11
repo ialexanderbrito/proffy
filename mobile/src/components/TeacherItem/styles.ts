@@ -73,7 +73,7 @@ export const ButtonsContainer = styled.View`
 `;
 
 export const FavoriteButton = styled(RectButton)<{ favorited?: Boolean }>`
-  background: ${(props) => (props.favorited ? '#8257e5' : '#e33d3d')};
+  background: ${(props) => (props.favorited ? '#e33d3d' : '#8257e5')};
   width: 56px;
   height: 56px;
   border-radius: 8px;
