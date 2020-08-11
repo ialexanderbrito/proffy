@@ -31,7 +31,7 @@ function Landing() {
           <h2>Sua plataforma de estudos online.</h2>
         </Styled.LogoContainer>
 
-        <img
+        <Styled.HeroImage
           src={LandingImg}
           alt="Plataforma de estudos"
           className="hero-image"

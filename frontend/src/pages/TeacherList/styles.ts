@@ -14,27 +14,6 @@ export const PageTeacherList = styled.div`
       position: absolute;
       bottom: -28px;
     }
-
-    button {
-      width: 100%;
-      height: 5.6rem;
-      background: var(--color-secundary);
-      color: var(--color-button-text);
-      border: 0;
-      border-radius: 0.8rem;
-      cursor: pointer;
-      font: 700 1.6rem Archivo;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      transition: background-color 0.2s;
-      margin-top: 3.2rem;
-
-      :hover {
-        background: var(--color-secundary-dark);
-      }
-    }
   }
 
   #search-teachers {
@@ -43,6 +22,29 @@ export const PageTeacherList = styled.div`
     label {
       color: var(--color-text-in-primary);
     }
+  }
+`;
+
+export const Button = styled.button`
+  width: 97%;
+  height: 5.6rem;
+  background: var(--color-secundary);
+  color: var(--color-button-text);
+  border: 0;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  font: 700 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  margin-top: 3.2rem;
+  &:hover {
+    background: var(--color-secundary-dark);
+  }
+  @media (min-width: 700px) {
+    margin-left: 16px;
   }
 `;
 

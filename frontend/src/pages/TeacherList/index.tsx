@@ -84,7 +84,7 @@ function TeacherList() {
             }}
           />
 
-          <button type="submit">Buscar</button>
+          <Styled.Button type="submit">Buscar</Styled.Button>
         </form>
       </PageHeader>
 
