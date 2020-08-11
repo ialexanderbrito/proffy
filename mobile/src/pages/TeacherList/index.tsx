@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { KeyboardAvoidingView, Platform } from 'react-native';
 import { BorderlessButton } from 'react-native-gesture-handler';
 import { Feather } from '@expo/vector-icons';
+import RNPickerSelect from 'react-native-picker-select';
 import AsyncStorage from '@react-native-community/async-storage';
 import { useFocusEffect } from '@react-navigation/native';
 
@@ -59,68 +61,105 @@ function TeacherList() {
   }
 
   return (
-    <Styled.Container>
-      <PageHeader
-        title="Proffys disponíveis"
-        headerRight={
-          <BorderlessButton onPress={handleToggleFiltersVisible}>
-            <Feather name="filter" size={20} color="#FFF" />
-          </BorderlessButton>
-        }
-      >
-        {isFiltersVisible && (
-          <Styled.SearchForm>
-            <Styled.Label>Matéria</Styled.Label>
-            <Styled.Input
-              placeholderTextColor="#c1bccc"
-              placeholder="Qual a matéria?"
-              value={subject}
-              onChangeText={(text) => setSubject(text)}
-            ></Styled.Input>
+    <KeyboardAvoidingView
+      style={{ flex: 1 }}
+      behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+      enabled
+    >
+      <Styled.Container>
+        <PageHeader
+          title="Proffys disponíveis"
+          headerRight={
+            <BorderlessButton onPress={handleToggleFiltersVisible}>
+              <Feather name="filter" size={20} color="#FFF" />
+            </BorderlessButton>
+          }
+        >
+          {isFiltersVisible && (
+            <Styled.SearchForm>
+              <Styled.Label>Matéria</Styled.Label>
+              <Styled.Input
+                placeholderTextColor="#c1bccc"
+                placeholder="Qual a matéria?"
+                value={subject}
+                onChangeText={(text) => setSubject(text)}
+              ></Styled.Input>
 
-            <Styled.InputGroup>
-              <Styled.InputBlock>
-                <Styled.Label>Dia da semana</Styled.Label>
-                <Styled.Input
-                  placeholderTextColor="#c1bccc"
-                  placeholder="Qual o dia?"
-                  value={week_day}
-                  onChangeText={(text) => setWeekDay(text)}
-                ></Styled.Input>
-              </Styled.InputBlock>
+              <Styled.InputGroup>
+                <Styled.InputBlock>
+                  <Styled.Label>Dia da semana</Styled.Label>
+                  <RNPickerSelect
+                    placeholder={{ label: 'Selecione um dia' }}
+                    Icon={() => (
+                      <Feather name="chevron-down" size={20} color="#c1bccc" />
+                    )}
+                    style={{
+                      placeholder: {
+                        fontFamily: 'Poppins_400Regular',
+                        fontSize: 10,
+                        color: '#c1bccc',
+                      },
+                      viewContainer: {
+                        height: 54,
+                        backgroundColor: '#fff',
+                        borderRadius: 8,
+                        marginBottom: 16,
+                        paddingHorizontal: 16,
+                        marginTop: 4,
+                      },
+                      iconContainer: {
+                        marginTop: 16,
+                        marginRight: 8,
+                      },
+                    }}
+                    items={[
+                      { value: '0', label: 'Domingo' },
+                      { value: '1', label: 'Segunda-feira' },
+                      { value: '2', label: 'Terça-feira' },
+                      { value: '3', label: 'Quarta-feira' },
+                      { value: '4', label: 'Quinta-feira' },
+                      { value: '5', label: 'Sexta-feira' },
+                      { value: '6', label: 'Sábado' },
+                    ]}
+                    onValueChange={(itemValue, itemIndex) =>
+                      setWeekDay(String(itemValue))
+                    }
+                  />
+                </Styled.InputBlock>
 
-              <Styled.InputBlock>
-                <Styled.Label>Horário</Styled.Label>
-                <Styled.Input
-                  placeholderTextColor="#c1bccc"
-                  placeholder="Qual o horário?"
-                  value={time}
-                  onChangeText={(text) => setTime(text)}
-                ></Styled.Input>
-              </Styled.InputBlock>
-            </Styled.InputGroup>
+                <Styled.InputBlock>
+                  <Styled.Label>Horário</Styled.Label>
+                  <Styled.Input
+                    placeholderTextColor="#c1bccc"
+                    placeholder="Qual o horário?"
+                    value={time}
+                    onChangeText={(text) => setTime(text)}
+                  ></Styled.Input>
+                </Styled.InputBlock>
+              </Styled.InputGroup>
 
-            <Styled.SubmitButton onPress={handleFiltersSubmit}>
-              <Styled.SubmitButtonText>Filtrar</Styled.SubmitButtonText>
-            </Styled.SubmitButton>
-          </Styled.SearchForm>
-        )}
-      </PageHeader>
+              <Styled.SubmitButton onPress={handleFiltersSubmit}>
+                <Styled.SubmitButtonText>Filtrar</Styled.SubmitButtonText>
+              </Styled.SubmitButton>
+            </Styled.SearchForm>
+          )}
+        </PageHeader>
 
-      <Styled.TeacherList
-        contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 16 }}
-      >
-        {teachers.map((teacher: Teacher) => {
-          return (
-            <TeacherItem
-              key={teacher.id}
-              teacher={teacher}
-              favorited={favorites.includes(teacher.id)}
-            />
-          );
-        })}
-      </Styled.TeacherList>
-    </Styled.Container>
+        <Styled.TeacherList
+          contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 16 }}
+        >
+          {teachers.map((teacher: Teacher) => {
+            return (
+              <TeacherItem
+                key={teacher.id}
+                teacher={teacher}
+                favorited={favorites.includes(teacher.id)}
+              />
+            );
+          })}
+        </Styled.TeacherList>
+      </Styled.Container>
+    </KeyboardAvoidingView>
   );
 }
 
