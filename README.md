@@ -36,6 +36,9 @@ Extras:
   - [SQLite3](https://www.sqlite.org/index.html)
   - [CORS](https://github.com/expressjs/cors#readme)
   - [Toastify](https://fkhadra.github.io/react-toastify/introduction)
+  - [Axios](https://github.com/axios/axios)
+  - [React Picker Select](https://www.npmjs.com/package/react-native-picker-select)
+  - [Expo Google Fonts](https://github.com/expo/google-fonts)
 
 - Estilos
 
@@ -45,7 +48,7 @@ Extras:
 
 ### 💻 Demo Web
 
-[Em breve](#)
+[Visite o site](https://proffy-oficial.netlify.app/)
 
 ### 📱 App
 
@@ -61,7 +64,7 @@ Podemos considerar este projeto como sendo divido em três partes:
 
 1. Backend
 2. Frontend
-3. Mobile (em desenvolvimento)
+3. Mobile
 
 <b>💡 Tanto o Frontend quanto o Mobile precisam que o Backend esteja sendo executado para funcionar.</b>
 
@@ -120,6 +123,28 @@ $ npm start ou yarn start
 
 # A aplicação será aberta na porta:3000 - acesse http://localhost:3000
 ```
+
+### 🧭 Rodando o Mobile
+
+```bash
+# Clone este repositório
+$ git clone https://github.com/ialexanderbrito/proffy
+
+# Acesse a pasta do projeto no seu terminal/cmd
+$ cd proffy
+
+# Vá para a pasta da aplicação Mobile
+$ cd mobile
+
+# Instale as dependências
+$ npm install ou yarn
+
+# Execute a aplicação
+$ expo start ou yarn start
+
+# A aplicação será aberta no navegador basta acessar via QR Code pelo celular
+```
+
 
 ### :recycle: Como contribuir
 
