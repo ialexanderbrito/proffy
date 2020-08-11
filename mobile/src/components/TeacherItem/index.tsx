@@ -1,36 +1,42 @@
 import React from 'react';
 
-import * as Styled from './styles';
-
 import heartOutlineIcon from '../../assets/images/icons/heart-outline.png';
 import unfavoriteIcon from '../../assets/images/icons/unfavorite.png';
 import whatsappIcon from '../../assets/images/icons/whatsapp.png';
 
-function TeacherItem() {
+import * as Styled from './styles';
+
+export interface Teacher {
+  id: number;
+  name: string;
+  avatar: string;
+  whatsapp: string;
+  bio: string;
+  subject: string;
+  cost: number;
+}
+
+interface TeacherItemProps {
+  teacher: Teacher;
+}
+
+const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
   return (
     <Styled.Container>
       <Styled.Profile>
-        <Styled.Avatar
-          source={{ uri: 'https://github.com/ialexanderbrito.png' }}
-        />
+        <Styled.Avatar source={{ uri: teacher.avatar }} />
         <Styled.ProfileInfo>
-          <Styled.Name>Alexander</Styled.Name>
-          <Styled.Subject>Informática</Styled.Subject>
+          <Styled.Name>{teacher.name}</Styled.Name>
+          <Styled.Subject>{teacher.subject}</Styled.Subject>
         </Styled.ProfileInfo>
       </Styled.Profile>
 
-      <Styled.Bio>
-        Entusiasta das melhores tecnologias avançada.
-        {'\n'}
-        {'\n'}
-        Apaixonado por explodir coisas em laboratório e por mudar a vida das
-        pessoas através de experiência.
-      </Styled.Bio>
+      <Styled.Bio>{teacher.bio}</Styled.Bio>
 
       <Styled.Footer>
         <Styled.Price>
           Preço/hora{'   '}
-          <Styled.PriceValue>R$ 20,00</Styled.PriceValue>
+          <Styled.PriceValue>R$ {teacher.cost}</Styled.PriceValue>
         </Styled.Price>
 
         <Styled.ButtonsContainer>
@@ -49,6 +55,6 @@ function TeacherItem() {
       </Styled.Footer>
     </Styled.Container>
   );
-}
+};
 
 export default TeacherItem;
