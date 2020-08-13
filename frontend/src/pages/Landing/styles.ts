@@ -10,39 +10,31 @@ export const PageLanding = styled.div`
   background: var(--color-primary);
 `;
 
-export const PageLandingContent = styled.div`
-  @media (min-width: 1100px) {
-    max-width: 1100px;
-    display: grid;
-    grid-template-rows: 350px 1fr;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-areas:
-      'logo hero hero'
-      'buttons buttons total';
-  }
-`;
-
 export const LogoContainer = styled.div`
   text-align: center;
   margin-bottom: 3.2rem;
-  > img {
+
+  img {
     height: 10rem;
   }
-  > h2 {
+
+  h2 {
     font-weight: 500;
     font-size: 2.4rem;
     line-height: 4.6rem;
-    margin-top: 0.2rem;
+    margin-top: 0.8rem;
   }
   @media (min-width: 1100px) {
     grid-area: logo;
     align-self: center;
     margin: 0;
     text-align: left;
-    > img {
+
+    img {
       height: 100%;
     }
-    > h2 {
+
+    h2 {
       text-align: initial;
       font-size: 3.6rem;
     }
@@ -51,6 +43,7 @@ export const LogoContainer = styled.div`
 
 export const HeroImage = styled.img`
   width: 90vw;
+
   @media (min-width: 1100px) {
     width: 100%;
     grid-area: hero;
@@ -61,9 +54,10 @@ export const HeroImage = styled.img`
 export const ButtonsContainer = styled.div`
   display: flex;
   justify-content: center;
+
   margin: 3.2rem 0;
-  max-width: 90vw;
-  > a {
+
+  a {
     width: 30rem;
     height: 10.4rem;
     border-radius: 0.4rem;
@@ -72,26 +66,33 @@ export const ButtonsContainer = styled.div`
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: var(--color-button-text);
+    color: #fff;
     transition: background-color 0.2s;
   }
+
   > a:first-child {
     margin-right: 1.6rem;
   }
+
   > a.study {
     background: var(--color-primary-lighter);
+
     &:hover {
       background: var(--color-primary-light);
     }
   }
+
   > a.give-classes {
     background: var(--color-secundary);
+
     &:hover {
       background: var(--color-secundary-dark);
     }
   }
-  > a img {
+
+  a img {
     width: 4rem;
+    margin-right: 2.4rem;
   }
   @media (min-width: 1100px) {
     grid-area: buttons;

@@ -13,7 +13,10 @@ export const Container = styled.div`
     width: calc(100% - 3.2rem);
     height: 2px;
     content: '';
-    background: var(--color-primary-light);
+    background: ${({ theme }) =>
+      theme.title === 'light'
+        ? 'var(--color-primary-light)'
+        : 'var(--color-primary-darker)'};
     position: absolute;
     left: 1.6rem;
     right: 1.6rem;

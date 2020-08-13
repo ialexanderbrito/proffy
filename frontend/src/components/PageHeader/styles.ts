@@ -1,9 +1,17 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const PageHeader = styled.header`
   display: flex;
   flex-direction: column;
-  background-color: var(--color-primary);
+
+  ${({ theme }) =>
+    theme.title === 'light'
+      ? css`
+          background: var(--color-primary);
+        `
+      : css`
+          background: var(--color-primary-darker);
+        `};
 
   @media (min-width: 700px) {
     height: 340px;
@@ -18,6 +26,11 @@ export const TopBarContainer = styled.div`
   align-items: center;
   color: var(--color-text-in-primary);
   padding: 1.6rem 0;
+
+  div.react-toggle {
+    margin-left: auto;
+    margin-right: 15px;
+  }
 
   @media (min-width: 700px) {
     max-width: 1100px;

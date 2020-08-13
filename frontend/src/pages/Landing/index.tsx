@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
+import Container from '../../components/Container';
+
 import logoImg from '../../assets/images/logo.svg';
 import LandingImg from '../../assets/images/landing.svg';
 
@@ -25,7 +27,7 @@ function Landing() {
 
   return (
     <Styled.PageLanding>
-      <Styled.PageLandingContent id="landing-content" className="container">
+      <Container page="landing">
         <Styled.LogoContainer>
           <img src={logoImg} alt="Proffy" />
           <h2>Sua plataforma de estudos online.</h2>
@@ -53,7 +55,7 @@ function Landing() {
           Total de {totalConnections} conexões já realizadas{' '}
           <img src={purpleHeartIcon} alt="Coração roxo" />
         </Styled.TotalConnections>
-      </Styled.PageLandingContent>
+      </Container>
     </Styled.PageLanding>
   );
 }
