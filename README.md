@@ -35,6 +35,8 @@ Extras:
   - [KnexJS](http://knexjs.org/)
   - [SQLite3](https://www.sqlite.org/index.html)
   - [CORS](https://github.com/expressjs/cors#readme)
+  - [React Toggle](https://github.com/aaronshaf/react-toggle)
+  - [React Icons](https://react-icons.github.io/react-icons/)
   - [Toastify](https://fkhadra.github.io/react-toastify/introduction)
   - [Axios](https://github.com/axios/axios)
   - [React Picker Select](https://www.npmjs.com/package/react-native-picker-select)
