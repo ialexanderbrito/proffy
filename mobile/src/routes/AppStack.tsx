@@ -5,6 +5,7 @@ import {
   CardStyleInterpolators,
 } from '@react-navigation/stack';
 
+import InitialOnboarding from '../pages/InitialOnboarding';
 import Landing from '../pages/Landing';
 import GiveClasses from '../pages/GiveClasses';
 import StudyTabs from './StudyTabs';
@@ -17,11 +18,12 @@ function AppStack() {
       <Navigator
         screenOptions={{
           headerShown: false,
-          gestureEnabled: true,
+          gestureEnabled: false,
           gestureDirection: 'horizontal',
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}
       >
+        <Screen name="InitialOnboarding" component={InitialOnboarding} />
         <Screen name="Landing" component={Landing} />
         <Screen name="GiveClasses" component={GiveClasses} />
         <Screen name="Study" component={StudyTabs} />
