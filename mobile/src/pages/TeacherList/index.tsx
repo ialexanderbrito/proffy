@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { KeyboardAvoidingView, Platform } from 'react-native';
 import { BorderlessButton } from 'react-native-gesture-handler';
 import { Feather } from '@expo/vector-icons';
-import RNPickerSelect from 'react-native-picker-select';
+import { Picker } from '@react-native-community/picker';
 import AsyncStorage from '@react-native-community/async-storage';
 import { useFocusEffect } from '@react-navigation/native';
 
@@ -88,43 +88,29 @@ function TeacherList() {
               <Styled.InputGroup>
                 <Styled.InputBlock>
                   <Styled.Label>Dia da semana</Styled.Label>
-                  <RNPickerSelect
-                    placeholder={{ label: 'Selecione um dia' }}
-                    Icon={() => (
-                      <Feather name="chevron-down" size={20} color="#c1bccc" />
-                    )}
+                  <Picker
+                    selectedValue={week_day}
                     style={{
-                      placeholder: {
-                        fontFamily: 'Poppins_400Regular',
-                        fontSize: 10,
-                        color: '#c1bccc',
-                      },
-                      viewContainer: {
-                        height: 54,
-                        backgroundColor: '#fff',
-                        borderRadius: 8,
-                        marginBottom: 16,
-                        paddingHorizontal: 16,
-                        marginTop: 4,
-                      },
-                      iconContainer: {
-                        marginTop: 16,
-                        marginRight: 8,
-                      },
+                      height: 54,
+                      backgroundColor: '#fff',
+                      borderTopLeftRadius: 20,
+                      borderTopRightRadius: 20,
+                      marginBottom: 16,
+                      paddingHorizontal: 16,
+                      marginTop: 4,
                     }}
-                    items={[
-                      { value: '0', label: 'Domingo' },
-                      { value: '1', label: 'Segunda-feira' },
-                      { value: '2', label: 'Terça-feira' },
-                      { value: '3', label: 'Quarta-feira' },
-                      { value: '4', label: 'Quinta-feira' },
-                      { value: '5', label: 'Sexta-feira' },
-                      { value: '6', label: 'Sábado' },
-                    ]}
-                    onValueChange={(itemValue, itemIndex) =>
-                      setWeekDay(String(itemValue))
+                    onValueChange={(itemValue) =>
+                      setWeekDay(itemValue.toString())
                     }
-                  />
+                  >
+                    <Picker.Item label="Domingo" value={'0'} />
+                    <Picker.Item label="Segunda-feira" value={'1'} />
+                    <Picker.Item label="Terça-feira" value={'2'} />
+                    <Picker.Item label="Quarta-feira" value={'3'} />
+                    <Picker.Item label="Quinta-feira" value={'4'} />
+                    <Picker.Item label="Sexta-feira" value={'5'} />
+                    <Picker.Item label="Sábado" value={'6'} />
+                  </Picker>
                 </Styled.InputBlock>
 
                 <Styled.InputBlock>
