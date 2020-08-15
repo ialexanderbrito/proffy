@@ -1,4 +1,5 @@
 import React from 'react';
+import { Linking } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 import * as Styled from './styles';
@@ -10,6 +11,8 @@ function GiveClasses() {
 
   function handleNavigateBack() {
     goBack();
+
+    Linking.openURL('https://proffy-oficial.netlify.app/');
   }
 
   return (
