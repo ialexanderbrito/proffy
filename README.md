@@ -54,7 +54,7 @@ Extras:
 
 ### 📱 App
 
-[Em breve](#)
+[Android](https://expo.io/@ialexanderbrito/projects/proffy)
 
 ### 💻 Projeto
 
